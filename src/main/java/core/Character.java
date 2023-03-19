@@ -1,35 +1,58 @@
 package core;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-public abstract class Character extends Wizard{
+import java.util.List;
+
+
+@Getter
+@Setter
+public class Character extends Wizard{
+
+
+    public int numberDamageUpgrade;
+    public int numberHpUpgrade;
 
 
 
-        private String name;
-        private int maxHP;
-        private int currentHP;
+    public String[] damageUpgrades = {"Plus de dégats"};
+    public String[] hpUpgrades = {"Plus de vie"};
+    public Character(String name){
+        super(name, 100, 0);
+        this.numberDamageUpgrade = 0;
+        this.numberHpUpgrade = 0;
+        chooseUpgrade();
+    }
 
-        public Character(String name, int maxHealth) {
-                this.name = name;
-                this.maxHP = maxHealth;
-                this.currentHP = maxHealth;
+    public int attack(){
+        return 0;
+    }
+
+    public int defense(){
+        return 0;
+    }
+
+    public void chooseUpgrade(){
+        BasicClass.clearConsole();
+        BasicClass.printHeader("Choisissez une amélioration :");
+        System.out.println("1. "+damageUpgrades[numberDamageUpgrade]);
+        System.out.println("1. "+hpUpgrades[numberHpUpgrade]);
+        int input = BasicClass.readInt("-> ", 2);
+        BasicClass.clearConsole();
+        if(input==1){
+            BasicClass.printHeader("Vous avez augmenté votre attaque de 5 de dégats." + damageUpgrades[numberDamageUpgrade]+"!");
+            numberDamageUpgrade++;
+        }else {
+            BasicClass.printHeader("Vous avez augmenté vie a augmenté de 5 HP.  " + damageUpgrades[numberHpUpgrade]+"!");
+            numberHpUpgrade++;
         }
-
-        public abstract int attack();
-        public abstract int defense();
-
+        BasicClass.anythingToContinue();
+    }
 
 
-/*
-        public void takeDamage(int damage) {
-                int netDamage = Math.max(damage - this.defense, 0);
-                this.currentHP = Math.max(this.currentHP - netDamage, 0);
-        }
 
-        public abstract void attack(Character target);
 
- */
+
 }
 

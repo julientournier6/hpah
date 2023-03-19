@@ -4,32 +4,40 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
-import java.util.Scanner;
-
-import static java.lang.System.out;
 
 @Data
 @Getter
 @Setter
-public class Wizard {
+public class Wizard{
 
 
     private String name;
     private int maxHP;
     private int currentHP;
+    private int xp;
     private int defense;
     private String house;
     private List<Potion> potions;
     private List<Spell> spells;
 
-    public Wizard() {
-        this.name = name;
+    public Wizard(String name, int maxHP, int xp) {
+        this.name = this.name;
         this.maxHP = maxHP;
         this.currentHP = maxHP;
+        this.xp = xp;
         this.spells = spells;
         this.defense = defense;
         this.house = house;
         this.potions = potions;
+    }
+
+    public int attack(){
+        return 0;
+    }
+
+
+    public int defense(){
+        return 0;
     }
 
     public void removeHP(int value){
@@ -45,25 +53,14 @@ public class Wizard {
     }
 
 
+
     public static void main(){
-        character();
-        Pet.main();
-        Wand.main();
-        House.main();
+
 
     }
 
 
-    public static void character() {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Entrez le nom de votre sorcier : ");
-        String name = scanner.nextLine();
-        System.out.println("Le nom de votre sorcier est " + name);
-        System.out.println("Bien " + name + ", il est l'heure d'aller chez Ollivander pour acheter ta baguette. " +
-                "Appuie sur Entrée pour aller sur le chemin de Traverse");
-        scanner.nextLine();
-    }
 
 
 
