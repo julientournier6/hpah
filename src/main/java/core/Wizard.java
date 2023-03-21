@@ -12,18 +12,18 @@ public class Wizard{
 
 
     private String name;
-    private int maxHP;
-    private int currentHP;
+    private int maxHp;
+    private int currentHp;
     private int xp;
     private int defense;
     private String house;
     private List<Potion> potions;
     private List<Spell> spells;
 
-    public Wizard(String name, int maxHP, int xp) {
+    public Wizard(String name, int maxHp, int xp) {
         this.name = this.name;
-        this.maxHP = maxHP;
-        this.currentHP = maxHP;
+        this.maxHp = maxHp;
+        this.currentHp = maxHp;
         this.xp = xp;
         this.spells = spells;
         this.defense = defense;
@@ -40,16 +40,16 @@ public class Wizard{
         return 0;
     }
 
-    public void removeHP(int value){
-        this.currentHP -= value;
+    public void removeHp(int value){
+        this.currentHp -= value;
     }
 
     public void addHealth(int value) {
-        this.currentHP += value;
+        this.currentHp += value;
     }
 
     public void takeDamage(int damage) {
-        removeHP(damage);
+        removeHp(damage);
     }
 
 

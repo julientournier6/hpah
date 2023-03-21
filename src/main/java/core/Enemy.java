@@ -1,8 +1,16 @@
 package core;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
+@Data
+@Getter
+@Setter
 public class Enemy extends AbstractEnemy {
-    public Enemy(String name) {
-        super(name, 100, 15, 10);
+
+    public static String[] enemy = {"Détraqueurs", "Peter Pettigrow", "Mangemorts"};
+    public Enemy(String name, int maxHp, int attack, int defense) {
+        super(name, maxHp, attack, defense);
     }
 
     @Override
