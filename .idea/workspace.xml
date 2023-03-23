@@ -4,15 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fe2eb80-8b63-4963-b038-85222834c1fe" name="Changes" comment="Grosse avancée&#10;&#10;On setup les années, un menu pour le joueur, l'inventaire et on remet tout en ordre">
+    <list default="true" id="3fe2eb80-8b63-4963-b038-85222834c1fe" name="Changes" comment="On continue&#10;&#10;Les combats, les potions.&#10;Je dois comprendre comment remettre des variables dans d'autres classes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/Battle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/year1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/year2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/year3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/year4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/year5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/year6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/year7.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/AbstractEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/AbstractEnemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/BasicClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/BasicClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/Boss.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/Potion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/Potion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/Story.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/Story.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,12 +84,20 @@
       <option name="project" value="LOCAL" />
       <updated>1679256019716</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="On continue&#10;&#10;Les combats, les potions.&#10;Je dois comprendre comment remettre des variables dans d'autres classes">
+      <created>1679440407929</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679440407929</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changement de projet&#10;&#10;On refait avec Maven" />
     <MESSAGE value="Grosse avancée&#10;&#10;On setup les années, un menu pour le joueur, l'inventaire et on remet tout en ordre" />
-    <option name="LAST_COMMIT_MESSAGE" value="Grosse avancée&#10;&#10;On setup les années, un menu pour le joueur, l'inventaire et on remet tout en ordre" />
+    <MESSAGE value="On continue&#10;&#10;Les combats, les potions.&#10;Je dois comprendre comment remettre des variables dans d'autres classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="On continue&#10;&#10;Les combats, les potions.&#10;Je dois comprendre comment remettre des variables dans d'autres classes" />
   </component>
 </project>
