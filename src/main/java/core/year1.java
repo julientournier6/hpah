@@ -86,7 +86,7 @@ public class year1 {
         //boucle bataille
         while (true){
             BasicClass.clearConsole();
-            BasicClass.printHeader(Enemy.enemy[0] + "\nHP : " + Enemy.currentHp + "/" + Enemy.maxHp);
+            BasicClass.printHeader(Enemy.troll.getName() + "\nHP : " + Enemy.troll.getCurrentHp() + "/" + Enemy.troll.getMaxHp());
             BasicClass.printSeparator(30);
             System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion");
             int input = BasicClass.readInt("->", 3);

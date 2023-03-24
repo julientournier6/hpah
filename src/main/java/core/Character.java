@@ -3,8 +3,6 @@ package core;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
-
 
 @Getter
 @Setter
@@ -18,7 +16,7 @@ public class Character extends Wizard{
 
     public String[] damageUpgrades = {"Plus de dégats"};
     public String[] hpUpgrades = {"Plus de vie"};
-    public Character(String name, int maxHp, int xp){
+    public Character(){
         super(name, 100, 0);
         this.numberDamageUpgrade = 0;
         this.numberHpUpgrade = 0;

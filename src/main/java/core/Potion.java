@@ -6,6 +6,7 @@ import lombok.Setter;
 import java.util.Random;
 @Getter
 @Setter
+
 public class Potion {
     private String potionName;
     private int instantPotion;
@@ -32,10 +33,10 @@ public class Potion {
     public static void usePotion(Character character, Potion potion) {
         System.out.println("Souhaitez vous utiliser :\n\r1. Une potion de soin instantanée\n\r2. Une potion de régénération");
         int input = BasicClass.readInt("->", 2);
-        if (input == 1){
+        if (input == 1) {
             character.setCurrentHp(character.getCurrentHp() + potion.getRegenPotion());
             System.out.println(character.getName() + " utilise la potion " + potion.getPotionName() + " et récupère " + potion.getInstantPotion() + " points de vie !");
-        }else {
+        } else {
             int soinParTour = potion.getInstantPotion() / potion.getRegenPotion();
             for (int i = 0; i < potion.getRegenPotion(); i++) {
                 character.setCurrentHp(character.getCurrentHp() + soinParTour);
@@ -44,7 +45,8 @@ public class Potion {
 
         }
     }
-
+}
+/*
     public static void main(String[] args) {
         // Initialisation des potions
         Potion potion1 = new Potion("Potion de soin instantanée", 30, 0);
@@ -57,3 +59,4 @@ public class Potion {
         }
     }
 }
+*/

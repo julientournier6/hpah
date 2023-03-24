@@ -1,6 +1,7 @@
 package core;
 
 import static core.BasicClass.printHeader;
+import static core.BasicClass.wizard;
 
 public class year2 {
 
@@ -46,50 +47,54 @@ public class year2 {
 
 
     public static void attack1(){
-        int attack = Character.attack();
-        if(defense == 0){
+        if(wizard.getDefense() == 0){
             System.out.println("On vous attaque !");
-            int hit = Enemy.attack();
-            System.out.println("Vous avez subit "+hit+" de dégats.");
-        } else if (defense == 1) {
+            wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.Basilic.getAttack());
+            System.out.println("Vous avez subit "+Enemy.Basilic.getAttack()+" de dégats.");
+        } else if (wizard.getDefense() == 1) {
             System.out.println("On vous attaque !");
             Battle.defense25Percents();
             if (Battle.defense25Percents()){
-                int attack = Character.attack();
+                Enemy.Basilic.setCurrentHp(Enemy.Basilic.getCurrentHp()- Enemy.Basilic.getAttack());
+                System.out.println("Oh ! Vous avez paré et renvoyé l'attaque !");
+                System.out.println("Le " + Enemy.Basilic.getName() + " a subi " + Enemy.Basilic.getAttack() +", il lui reste " + Enemy.Basilic.getCurrentHp() + "points de vie");
             }else {
-                int hit = Enemy.attack();
-                System.out.println("Vous avez subit "+hit+" de dégats.");
+                wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.Basilic.getAttack());
+                System.out.println("Vous avez subit "+Enemy.Basilic.getAttack()+" de dégats, il vous reste "+ wizard.getCurrentHp() + " points de vie");
             }
-        }else if (defense==2) {
+        }else if (wizard.getDefense() == 2) {
             System.out.println("On vous attaque !");
             Battle.defense50Percents();
             if (Battle.defense50Percents()) {
-                int attack = Character.attack();
+                Enemy.Basilic.setCurrentHp(Enemy.Basilic.getCurrentHp()- Enemy.Basilic.getAttack());
                 System.out.println("Oh ! Vous avez paré et renvoyé l'attaque !");
+                System.out.println("Le " + Enemy.Basilic.getName() + " a subi " + Enemy.Basilic.getAttack() +", il lui reste " + Enemy.Basilic.getCurrentHp() + "points de vie");
             } else {
-                int hit = Enemy.attack();
-                System.out.println("Vous avez subit " + hit + " de dégats.");
+                wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.Basilic.getAttack());
+                System.out.println("Vous avez subit "+Enemy.Basilic.getAttack()+" de dégats, il vous reste "+ wizard.getCurrentHp() + " points de vie");
             }
-        }else if (defense==3) {
+        }else if (wizard.getDefense() == 3) {
             System.out.println("On vous attaque !");
             Battle.defense75Percents();
             if (Battle.defense75Percents()) {
-                int attack = Character.attack();
+                Enemy.Basilic.setCurrentHp(Enemy.Basilic.getCurrentHp()- Enemy.Basilic.getAttack());
                 System.out.println("Oh ! Vous avez paré et renvoyé l'attaque !");
+                System.out.println("Le " + Enemy.Basilic.getName() + " a subi " + Enemy.Basilic.getAttack() +", il lui reste " + Enemy.Basilic.getCurrentHp() + "points de vie");
             } else {
-                int hit = Enemy.attack();
-                System.out.println("Vous avez subit " + hit + " de dégats.");
+                wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.Basilic.getAttack());
+                System.out.println("Vous avez subit "+Enemy.Basilic.getAttack()+" de dégats, il vous reste "+ wizard.getCurrentHp() + " points de vie");
             }
         }else {
-            int hit = Enemy.attack();
-            System.out.println("Oh ! Vous avez paré et renvoyé l'attaque !");
+            System.out.println("Niveau de protection maximum ! Vous renvoyez l'attaque");
+            Enemy.Basilic.setCurrentHp(Enemy.Basilic.getCurrentHp()- Enemy.Basilic.getAttack());
+            System.out.println("Le " + Enemy.Basilic.getName() + " a subi " + Enemy.Basilic.getAttack() +", il lui reste " + Enemy.Basilic.getCurrentHp() + "points de vie");
         }
     }
     public static void battle(Enemy detraqueurs, Boss boss){
         //boucle bataille
         while (true){
             BasicClass.clearConsole();
-            BasicClass.printHeader(Enemy.enemy[0] + "\nHP : " + Enemy.currentHp + "/" + Enemy.maxHp);
+            BasicClass.printHeader(Enemy.Basilic.getName() + "\nHP : " + Enemy.Basilic.getCurrentHp() + "/" + Enemy.Basilic.getMaxHp());
             BasicClass.printSeparator(30);
             System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion");
             int input = BasicClass.readInt("->", 3);
@@ -101,19 +106,19 @@ public class year2 {
                 //Se protéger
                 int defense = 0;
                 defense = defense + 1;
-                int hit = Enemy.attack;
+                int hit = Enemy.Basilic.getAttack();
                 System.out.println("Votre protection augmente de 1\r\nVous êtes au rang "+defense+"/4 de protection.\r\nVous avez subit "+hit+" de dégats.");
             }else {
                 //Les potions
                 return;
             }
-            if(Character.currentHp < 0){
+            if(wizard.getCurrentHp() < 0){
                 Battle.gameOver();
                 break;
-            } else if (enemy.currentHp < 0) {
-                Enemy.currentHp=0;
+            } else if (Enemy.Basilic.getCurrentHp() < 0) {
+                Enemy.Basilic.setCurrentHp(0);
                 BasicClass.clearConsole();
-                printHeader("Vous avez tué le "+Enemy.enemy[0]+" ! ");
+                printHeader("Vous avez tué le "+Enemy.Basilic.getName()+" ! ");
 
             }
 

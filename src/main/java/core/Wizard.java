@@ -10,7 +10,6 @@ import java.util.List;
 @Setter
 public class Wizard{
 
-
     private String name;
     private int maxHp;
     private int currentHp;
