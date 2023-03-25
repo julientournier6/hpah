@@ -8,6 +8,7 @@ public class year1 {
     public static void main(){
         introYear1();
         preBattleYear1();
+        battle();
 
     }
 
@@ -86,7 +87,9 @@ public class year1 {
         //boucle bataille
         while (true){
             BasicClass.clearConsole();
+            BasicClass.printSeparator(30);
             BasicClass.printHeader(Enemy.troll.getName() + "\nHP : " + Enemy.troll.getCurrentHp() + "/" + Enemy.troll.getMaxHp());
+            BasicClass.printHeader(wizard.getName()+ "\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
             BasicClass.printSeparator(30);
             System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion");
             int input = BasicClass.readInt("->", 3);
@@ -101,8 +104,10 @@ public class year1 {
                 int hit = Enemy.attack;
                 System.out.println("Votre protection augmente de 1\r\nVous êtes au rang "+defense+"/4 de protection.\r\nVous avez subit "+hit+" de dégats.");
             }else {
-                //Les potions
-                return;
+                System.out.println("On vous attaque !");
+                wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.troll.getAttack());
+                System.out.println("Vous avez subit "+Enemy.troll.getAttack()+" de dégats.");
+                BasicClass.anythingToContinue();
             }
             if(Character.currentHp < 0){
                 Battle.gameOver();

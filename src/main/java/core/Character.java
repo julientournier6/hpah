@@ -3,12 +3,23 @@ package core;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 
 @Getter
 @Setter
 public class Character extends Wizard{
 
 
+    private String name;
+    private int maxHp;
+    private int currentHp;
+    private int xp;
+    private int defense;
+    private String house;
+    private List<Potion> potions;
+    private List<Spell> spells;
+    private int attack;
     public int numberDamageUpgrade;
     public int numberHpUpgrade;
 
@@ -16,8 +27,9 @@ public class Character extends Wizard{
 
     public String[] damageUpgrades = {"Plus de dégats"};
     public String[] hpUpgrades = {"Plus de vie"};
-    public Character(){
-        super(name, 100, 0);
+    public Character(String name, int maxHp, int currentHp, int attack ){
+        super(100, 100, 20);
+        this.name = name;
         this.numberDamageUpgrade = 0;
         this.numberHpUpgrade = 0;
         chooseUpgrade();
