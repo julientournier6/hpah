@@ -1,14 +1,15 @@
 package core;
 
-import static core.BasicClass.printHeader;
+import static core.BasicClass.*;
 
 public class year1 {
-    public static boolean goodSpell;
+    static boolean goodSpell = false;
     static int defense = 0;
     public static void main(){
         introYear1();
         preBattleYear1();
         battle();
+        BasicClass.anythingToContinue();
 
     }
 
@@ -16,17 +17,20 @@ public class year1 {
         BasicClass.clearConsole();
         System.out.println("""
                 Bienvenue dans ton premier cours de sortilège.
-                Tu vas apprendre le sortilège Wingardium Leviosa.
+                L'objectif est de soulever une plume.
+                Tu vas donc apprendre le sortilège Wingardium Leviosa.
                 Répète après moi : Wingardium Leviosa
                 1. Wingardium Leviosa
                 2. Wingardium Levioooosa
-                2. Wangardium Leviosa""");
-        while (goodSpell){
-            int input =BasicClass.readInt("Lequel à la bonne prononciation ?",3);
+                3. Wangardium Leviosa""");
+        while (goodSpell == false){
+            int input = BasicClass.readInt("Lequel à la bonne prononciation ?",3);
             if (input==1){
                 System.out.println("Bravo, vous avez bien appris le sortilège");
+                goodSpell = true;
             }else {
                 goodSpell=false;
+                System.out.println("Ce n'est pas la bonne prononciation. La plume que tu essaies de bouger ne s'envole pas...");
             }
         }
         BasicClass.anythingToContinue();
@@ -120,5 +124,13 @@ public class year1 {
             }
 
         }
+    }
+
+    public static void outroYear1(){
+        System.out.println("""
+                Les professeurs arrivent juste après que vous ayiez battu le Troll.
+                Vous craignez les ennuies mais ils semblent soulagés.
+                Le reste de votre année se passe sans encombre, vous passez en seconde année.
+                """);
     }
 }

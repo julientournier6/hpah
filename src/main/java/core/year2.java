@@ -14,13 +14,18 @@ public class year2 {
     }
 
     public static void introYear2(){
+        System.out.println("""
+                Bienvenue en seconde année à Poudlard !
+                Cette seconde année va être un bon moyen de se former aux duels.
+                Un duel est d'ailleurs programmé pour ce soir...""");
+        BasicClass.anythingToContinue();
         BasicClass.clearConsole();
         System.out.println("""
                 Vous affrontez votre rivale en duel. Il faut a tout prix le ridiculiser.
                 Quel sort utilisez vous ?
                 1. Avada Kedavra
                 2. Accio
-                2. Bombarda Maxima""");
+                3. Bombarda Maxima""");
         while (goodSpell){
             int input =BasicClass.readInt("Quel sort choisissez vous ?",3);
             if (input==2){
@@ -47,7 +52,7 @@ public class year2 {
     }
 
 
-    public static void attack1(){
+    public static void attack2(){
         if(wizard.getDefense() == 0){
             System.out.println("On vous attaque !");
             wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.basilic.getAttack());
@@ -95,23 +100,36 @@ public class year2 {
         //boucle bataille
         while (true){
             BasicClass.clearConsole();
+            BasicClass.printSeparator(30);
             BasicClass.printHeader(Enemy.basilic.getName() + "\nHP : " + Enemy.basilic.getCurrentHp() + "/" + Enemy.basilic.getMaxHp());
+            BasicClass.printHeader(wizard.getName()+ "\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
             BasicClass.printSeparator(30);
             System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion");
             int input = BasicClass.readInt("->", 3);
             //Conditions du tour du joueur
             if(input == 1){
                 //La bagarre
-                attack1();
+                System.out.println("Vous avez choisi d'attaquer !");
+                Enemy.basilic.setCurrentHp(Enemy.basilic.getCurrentHp()- wizard.getAttack());
+                System.out.println("Vous avez infliger " + wizard.getAttack() + " degâts au " + Enemy.basilic.getName());
+                BasicClass.anythingToContinue();
+                System.out.println("On vous attaque !");
+                wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.basilic.getAttack());
+                System.out.println("Vous avez subit "+Enemy.basilic.getAttack()+" de dégats.");
+                BasicClass.anythingToContinue();
             } else if (input==2) {
                 //Se protéger
-                int defense = 0;
-                defense = defense + 1;
-                int hit = Enemy.basilic.getAttack();
-                System.out.println("Votre protection augmente de 1\r\nVous êtes au rang "+defense+"/4 de protection.\r\nVous avez subit "+hit+" de dégats.");
+                System.out.println("Vous avez choisi de vous défendre !");
+                wizard.setDefense(wizard.getDefense()+1);
+                System.out.println("Votre protection augmente de 1\r\nVous êtes au rang "+wizard.getDefense()+" de protection.");
+                BasicClass.anythingToContinue();
+                attack2();
+                BasicClass.anythingToContinue();
             }else {
-                //Les potions
-                return;
+                System.out.println("On vous attaque !");
+                wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.basilic.getAttack());
+                System.out.println("Vous avez subit "+Enemy.basilic.getAttack()+" de dégats.");
+                BasicClass.anythingToContinue();
             }
             if(wizard.getCurrentHp() < 0){
                 Battle.gameOver();
@@ -120,6 +138,8 @@ public class year2 {
                 Enemy.basilic.setCurrentHp(0);
                 BasicClass.clearConsole();
                 printHeader("Vous avez tué le "+Enemy.basilic.getName()+" ! ");
+                break;
+
 
             }
 

@@ -38,5 +38,7 @@ public class Battle {
         BasicClass.clearConsole();
         BasicClass.printHeader("Vous avez succombé");
         System.out.println("Merci d'avoir joué !");
+        BasicClass.anythingToContinue();
+        System.exit(0);
     }
 }

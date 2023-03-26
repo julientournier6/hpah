@@ -93,10 +93,11 @@ public class BasicClass {
         Pet.main();
         Wand.main();
         House.main();
+        anythingToContinue();
 
 
         isRunning = true;
-        gameloop();
+
     }
 
     public static void inventory() {
@@ -116,6 +117,8 @@ public class BasicClass {
                 1. Reprendre
                 2. Inventaire
                 3. Quitter le jeu""");
+        anythingToContinue();
+        gameloop();
     }
 
     public static void changeYear() {
