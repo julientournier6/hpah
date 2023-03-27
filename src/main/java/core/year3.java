@@ -4,8 +4,8 @@ import static core.BasicClass.printHeader;
 import static core.BasicClass.wizard;
 
 public class year3 {
-    public static boolean goodSpell;
-    static int defense = 0;
+
+
     public static void main(){
         introYear3();
         preBattleYear3();

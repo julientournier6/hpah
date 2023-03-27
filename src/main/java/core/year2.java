@@ -6,7 +6,7 @@ import static core.BasicClass.wizard;
 public class year2 {
 
     public static boolean goodSpell;
-    static int defense = 0;
+
     public static void main(){
         introYear2();
         preBattleYear2();

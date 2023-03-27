@@ -14,7 +14,7 @@ public class BasicClass {
 
     public static int place = 0, year = 0;
     public static String[] places = {
-            "Chemin de Traverse", "Toilettes du donjon", "Chambre des secrets", "Lac dans la Forêt Interdite", " Cimetière de Little Hangleton", "Salle d’examen de Poudlard", "Tour d’astronomie", "Poudlard"
+            "Chemin de Traverse", "Toilettes du donjon", "Chambre des secrets", "Lac dans la Forêt Interdite", " Cimetière de Little Hangleton", "Salle d’examen de Poudlard", "Tour d’astronomie", "Poudlard", "Bureau de Dolores Ombrage"
     };
 
 

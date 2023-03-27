@@ -14,6 +14,7 @@ public class year4 {
         preBattleYear4();
         battle();
         battle2();
+        year4Outro();
 
 
     }
@@ -25,7 +26,7 @@ public class year4 {
                 Cette année est quelque peu particulière, Poudlard accueil le Tournoi des 3 Sorciers.
                 Seul les sorciers de 17 ans ou plus peuvent y participer, et un sorcier de Poudlard, Beauxbâtons et Durmstrang sera sélectionné.
                 Vous aurez un mois pour déposer votre nom dans la coupe pour participer.""");
-        System.out.println("");
+        System.out.println(wizard.getName() + " ! Votre nom est sorti de la coupe alors que vous n'avez que 14 ans... Vous êtes dans l'obligation de participer.\nIl va falloir affronter de nombreuses épreuves cette année.");
         BasicClass.anythingToContinue();
 
     }
@@ -153,6 +154,51 @@ public class year4 {
             System.out.println("Le " + Enemy.peterpettigrow.getName() + " a subi " + Enemy.peterpettigrow.getAttack() +", il lui reste " + Enemy.peterpettigrow.getCurrentHp() + "points de vie");
         }
     }
+
+    public static void attack45(){
+        if(wizard.getDefense() == 0){
+            System.out.println("On vous attaque !");
+            wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.voldemort.getAttack());
+            System.out.println("Vous avez subit "+Enemy.voldemort.getAttack()+" de dégats.");
+        } else if (wizard.getDefense() == 1) {
+            System.out.println("On vous attaque !");
+            Battle.defense25Percents();
+            if (Battle.defense25Percents()){
+                Enemy.voldemort.setCurrentHp(Enemy.voldemort.getCurrentHp()- Enemy.voldemort.getAttack());
+                System.out.println("Oh ! Vous avez paré et renvoyé l'attaque !");
+                System.out.println("Le " + Enemy.voldemort.getName() + " a subi " + Enemy.voldemort.getAttack() +", il lui reste " + Enemy.voldemort.getCurrentHp() + "points de vie");
+            }else {
+                wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.voldemort.getAttack());
+                System.out.println("Vous avez subit "+Enemy.voldemort.getAttack()+" de dégats, il vous reste "+ wizard.getCurrentHp() + " points de vie");
+            }
+        }else if (wizard.getDefense() == 2) {
+            System.out.println("On vous attaque !");
+            Battle.defense50Percents();
+            if (Battle.defense50Percents()) {
+                Enemy.voldemort.setCurrentHp(Enemy.voldemort.getCurrentHp()- Enemy.voldemort.getAttack());
+                System.out.println("Oh ! Vous avez paré et renvoyé l'attaque !");
+                System.out.println("Le " + Enemy.voldemort.getName() + " a subi " + Enemy.voldemort.getAttack() +", il lui reste " + Enemy.voldemort.getCurrentHp() + "points de vie");
+            } else {
+                wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.voldemort.getAttack());
+                System.out.println("Vous avez subit "+Enemy.voldemort.getAttack()+" de dégats, il vous reste "+ wizard.getCurrentHp() + " points de vie");
+            }
+        }else if (wizard.getDefense() == 3) {
+            System.out.println("On vous attaque !");
+            Battle.defense75Percents();
+            if (Battle.defense75Percents()) {
+                Enemy.voldemort.setCurrentHp(Enemy.voldemort.getCurrentHp()- Enemy.voldemort.getAttack());
+                System.out.println("Oh ! Vous avez paré et renvoyé l'attaque !");
+                System.out.println("Le " + Enemy.voldemort.getName() + " a subi " + Enemy.voldemort.getAttack() +", il lui reste " + Enemy.voldemort.getCurrentHp() + "points de vie");
+            } else {
+                wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.voldemort.getAttack());
+                System.out.println("Vous avez subit "+Enemy.voldemort.getAttack()+" de dégats, il vous reste "+ wizard.getCurrentHp() + " points de vie");
+            }
+        }else {
+            System.out.println("Niveau de protection maximum ! Vous renvoyez l'attaque");
+            Enemy.voldemort.setCurrentHp(Enemy.voldemort.getCurrentHp()- Enemy.voldemort.getAttack());
+            System.out.println("Le " + Enemy.voldemort.getName() + " a subi " + Enemy.voldemort.getAttack() +", il lui reste " + Enemy.voldemort.getCurrentHp() + "points de vie");
+        }
+    }
     public static void battle(){
         //boucle bataille
         while (true){
@@ -161,7 +207,7 @@ public class year4 {
             BasicClass.printHeader(Enemy.voldemort.getName() + "\nHP : " + Enemy.voldemort.getCurrentHp() + "/" + Enemy.voldemort.getMaxHp());
             BasicClass.printHeader(Enemy.peterpettigrow.getName() + "\nHP : " + Enemy.peterpettigrow.getCurrentHp() + "/" + Enemy.peterpettigrow.getMaxHp());
             BasicClass.printHeader(wizard.getName()+ "\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
-            BasicClass.printHeader("\nLe "+Enemy.trophy.getName() + " est à " + Enemy.trophy.getCurrentHp() + "! Il faudrait que vous puissiez le toucher pour retourner à Poudlard.\n Vous ne pouvez pas bouger ou l'on vous assassinera.");
+
             BasicClass.printSeparator(30);
             System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Accio\n\r2. Se protéger\n\r3. Utiliser une potion");
             int input = BasicClass.readInt("->", 3);
@@ -212,16 +258,16 @@ public class year4 {
             BasicClass.printSeparator(30);
             BasicClass.printHeader(Enemy.voldemort.getName() + "\nHP : " + Enemy.voldemort.getCurrentHp() + "/" + Enemy.voldemort.getMaxHp());
             BasicClass.printHeader(wizard.getName()+ "\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
-            BasicClass.printHeader("\nLe "+Enemy.trophy.getName() + " est à " + Enemy.trophy.getCurrentHp() + "! Il faudrait que vous puissiez le toucher pour retourner à Poudlard.\n Vous ne pouvez pas bouger ou l'on vous assassinera.");
+            BasicClass.printHeader("\nLe "+Enemy.trophy.getName() + " est à " + Enemy.trophy.getCurrentHp() + " mètres ! Il faudrait que vous puissiez le toucher pour retourner à Poudlard.\n Vous ne pouvez pas bouger ou l'on vous assassinera.");
             BasicClass.printSeparator(30);
             System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Accio\n\r2. Se protéger\n\r3. Utiliser une potion");
             int input = BasicClass.readInt("->", 3);
             //Conditions du tour du joueur
             if(input == 1){
                 //La bagarre
-                System.out.println("Vous avez choisi d'attaquer !");
+                System.out.println("Vous avez de rapprocher le Trophée !");
                 Enemy.voldemort.setCurrentHp(Enemy.voldemort.getCurrentHp()- wizard.getAttack());
-                System.out.println("Vous avez réussi à rapprocher le Trophée de " + Enemy.trophy.getName() + " mètres." );
+                System.out.println("Vous avez réussi à rapprocher le Trophée de " + Enemy.trophy.getCurrentHp() + " mètres." );
                 BasicClass.anythingToContinue();
                 System.out.println("On vous attaque !");
                 wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.voldemort.getAttack());
@@ -233,7 +279,7 @@ public class year4 {
                 wizard.setDefense(wizard.getDefense()+1);
                 System.out.println("Votre protection augmente de 1\r\nVous êtes au rang "+wizard.getDefense()+" de protection.");
                 BasicClass.anythingToContinue();
-                attack4();
+                attack45();
                 BasicClass.anythingToContinue();
             }else {
                 System.out.println("On vous attaque !");
@@ -254,6 +300,10 @@ public class year4 {
             }
 
         }
+    }
+
+    public static void year4Outro(){
+        System.out.println("Voldemort est vivant, il va falloir se préparer pour l'affronter dans le future.");
     }
 
 }
