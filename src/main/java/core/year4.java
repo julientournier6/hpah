@@ -21,11 +21,13 @@ public class year4 {
 
     public static void introYear4() {
         BasicClass.clearConsole();
+        BasicClass.printHeader("Année 4");
         System.out.println("""
                 Bienvenue en 4ème année !
                 Cette année est quelque peu particulière, Poudlard accueil le Tournoi des 3 Sorciers.
                 Seul les sorciers de 17 ans ou plus peuvent y participer, et un sorcier de Poudlard, Beauxbâtons et Durmstrang sera sélectionné.
                 Vous aurez un mois pour déposer votre nom dans la coupe pour participer.""");
+        BasicClass.anythingToContinue();
         System.out.println(wizard.getName() + " ! Votre nom est sorti de la coupe alors que vous n'avez que 14 ans... Vous êtes dans l'obligation de participer.\nIl va falloir affronter de nombreuses épreuves cette année.");
         BasicClass.anythingToContinue();
 
@@ -93,7 +95,7 @@ public class year4 {
                 1. A gauche
                 2. A droite
                 3. Tout droit""");
-        while (goodWay3=false) {
+        while (goodWay3==false) {
             int input3 = BasicClass.readInt("->", 3);
             if (input3 == 2) {
                 System.out.println("Une racine vous attrape le pied, vous arrivez à vous en défaire tant bien que mal.");
@@ -111,6 +113,7 @@ public class year4 {
     }
 
     public static void attack4(){
+        BasicClass.printHeader(BasicClass.places[4]);
         if(wizard.getDefense() == 0){
             System.out.println("On vous attaque !");
             wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.peterpettigrow.getAttack());
@@ -204,12 +207,11 @@ public class year4 {
         while (true){
             BasicClass.clearConsole();
             BasicClass.printSeparator(30);
-            BasicClass.printHeader(Enemy.voldemort.getName() + "\nHP : " + Enemy.voldemort.getCurrentHp() + "/" + Enemy.voldemort.getMaxHp());
             BasicClass.printHeader(Enemy.peterpettigrow.getName() + "\nHP : " + Enemy.peterpettigrow.getCurrentHp() + "/" + Enemy.peterpettigrow.getMaxHp());
             BasicClass.printHeader(wizard.getName()+ "\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
 
             BasicClass.printSeparator(30);
-            System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Accio\n\r2. Se protéger\n\r3. Utiliser une potion");
+            System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion");
             int input = BasicClass.readInt("->", 3);
             //Conditions du tour du joueur
             if(input == 1){
@@ -243,6 +245,7 @@ public class year4 {
                 Enemy.peterpettigrow.setCurrentHp(0);
                 BasicClass.clearConsole();
                 printHeader("Vous avez mit K.O "+Enemy.peterpettigrow.getName()+" ! ");
+                BasicClass.anythingToContinue();
                 break;
 
 
@@ -266,8 +269,8 @@ public class year4 {
             if(input == 1){
                 //La bagarre
                 System.out.println("Vous avez de rapprocher le Trophée !");
-                Enemy.voldemort.setCurrentHp(Enemy.voldemort.getCurrentHp()- wizard.getAttack());
-                System.out.println("Vous avez réussi à rapprocher le Trophée de " + Enemy.trophy.getCurrentHp() + " mètres." );
+                Enemy.trophy.setCurrentHp(Enemy.trophy.getCurrentHp()- wizard.getAttack());
+                System.out.println("Vous avez réussi à rapprocher le Trophée de " + wizard.getAttack() + " mètres." );
                 BasicClass.anythingToContinue();
                 System.out.println("On vous attaque !");
                 wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.voldemort.getAttack());
@@ -290,8 +293,8 @@ public class year4 {
             if(wizard.getCurrentHp() < 0){
                 Battle.gameOver();
                 break;
-            } else if (Enemy.voldemort.getCurrentHp() < 0) {
-                Enemy.voldemort.setCurrentHp(0);
+            } else if (Enemy.trophy.getCurrentHp() < 0) {
+                Enemy.trophy.setCurrentHp(0);
                 BasicClass.clearConsole();
                 printHeader("Vous effleurez le "+Enemy.trophy.getName()+" ! \n Vous vous sentez aspiré en voyant des lumières verte jaillissant autour de votre tête.");
                 break;
@@ -300,10 +303,12 @@ public class year4 {
             }
 
         }
+        BasicClass.anythingToContinue();
     }
 
     public static void year4Outro(){
         System.out.println("Voldemort est vivant, il va falloir se préparer pour l'affronter dans le future.");
+        BasicClass.anythingToContinue();
     }
 
 }

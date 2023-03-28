@@ -8,7 +8,7 @@ public class House {
         String house = "House";
         boolean correctHouse = false;
         System.out.println("""
-                Bienvenu à Poudlard ! Je suis le professeur McGonagall et je vais être en charge de vous enseigner la métamorphose cette année.\r
+                Bienvenue à Poudlard ! Je suis le professeur McGonagall et je vais être en charge de vous enseigner la métamorphose cette année.\r
                 Je suis aussi directrice de la maison Gryffondor.\r
                 En parlant de maisons, il est l'heure de vous répartir dans votre maison, qui restera la même pour vos 7 ans à Poudlard.\r
                 Mettez donc le choixpeau sur votre tête et laissez le vous guidez""");
@@ -43,7 +43,7 @@ public class House {
 
         System.out.println("Félicitation ! Tu es maintenant un "+ house +" !" +
                 "\r\nVa maintenant te reposer pour débuter ta première année à Poudlard.");
-
+        BasicClass.anythingToContinue();
 
 
     }

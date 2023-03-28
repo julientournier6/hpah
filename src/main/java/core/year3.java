@@ -14,6 +14,7 @@ public class year3 {
 
     public static void introYear3(){
         BasicClass.clearConsole();
+        BasicClass.printHeader("Année 3");
         System.out.println("""
                 Vous entrez dans le bureau du professeur Lupin, votre enseignant de Défense contre les Forces du Mal.
                 Soudainement un détraqueur se dresse devant vous.
@@ -25,6 +26,7 @@ public class year3 {
 
     public static void preBattleYear3(){
         BasicClass.clearConsole();
+        BasicClass.printHeader(BasicClass.places[3]);
         System.out.println("""
                 Vous vous balladez à Pré au Lard, d'un coup, le ciel s'assombrit, le température chute.
                 Pas de doutes, ce sont les détraqueurs que le professeur Lupin a mentionné lors de ses cours.
@@ -126,5 +128,6 @@ public class year3 {
             }
 
         }
+        BasicClass.anythingToContinue();
     }
 }

@@ -4,8 +4,8 @@ import static core.BasicClass.*;
 
 public class year5 {
     public static void main(){
-        introYear4();
-        preBattleYear4();
+        introYear5();
+        preLvlYear5();
         checkUserEntry1();
         checkUserEntry2();
         checkUserEntry3();
@@ -14,7 +14,7 @@ public class year5 {
         year5Outro();
     }
 
-    public static void introYear4() {
+    public static void introYear5() {
         BasicClass.clearConsole();
         BasicClass.printHeader("Année 5");
         System.out.println("""
@@ -27,7 +27,7 @@ public class year5 {
     }
 
 
-    public static void preBattleYear4(){
+    public static void preLvlYear5(){
         BasicClass.clearConsole();
         BasicClass.printHeader(BasicClass.places[8]);
         System.out.println("""
@@ -82,6 +82,7 @@ public class year5 {
             System.out.println("Vous avez subit "+Enemy.ombragePen.getAttack()+" de dégats, il vous reste "+ wizard.getCurrentHp() + " points de vie");
 
         }
+        BasicClass.anythingToContinue();
     }
 
     public static void preBattleYear5(){
@@ -90,6 +91,7 @@ public class year5 {
                 Poudlard n'est plus le même avec Ombrage en directrice.
                 Des rumeurs circulent dans les couloirs disant que des choses vont se passer lors des examens...
                 """);
+        BasicClass.anythingToContinue();
     }
 
     public static void attack5(){
@@ -140,6 +142,7 @@ public class year5 {
         //boucle bataille
         while (true) {
             BasicClass.clearConsole();
+            BasicClass.printHeader(BasicClass.places[5]);
             BasicClass.printSeparator(30);
             BasicClass.printHeader(Enemy.ombrage.getName() + "\nHP : " + Enemy.ombrage.getCurrentHp() + "/" + Enemy.ombrage.getMaxHp());
             BasicClass.printHeader(wizard.getName() + "\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
@@ -215,17 +218,19 @@ public class year5 {
             } else if (Enemy.ombrage.getCurrentHp() < 0) {
                 Enemy.ombrage.setCurrentHp(0);
                 BasicClass.clearConsole();
-                printHeader("Vous avez tué le " + Enemy.ombrage.getName() + " ! ");
+                printHeader("Vous avez mit K.O " + Enemy.ombrage.getName() + " ! ");
                 break;
 
 
             }
 
         }
+        BasicClass.anythingToContinue();
     }
 
     public static void year5Outro(){
         System.out.println("Vous avez chassé Ombrage de Poudlard !\nElle ne reviendra pas de si tôt. \nMais une menace bien plus importante plâne sur Poudlard...");
+        BasicClass.anythingToContinue();
     }
 
 }

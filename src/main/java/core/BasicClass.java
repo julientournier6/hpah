@@ -14,7 +14,7 @@ public class BasicClass {
 
     public static int place = 0, year = 0;
     public static String[] places = {
-            "Chemin de Traverse", "Toilettes du donjon", "Chambre des secrets", "Lac dans la Forêt Interdite", " Cimetière de Little Hangleton", "Salle d’examen de Poudlard", "Tour d’astronomie", "Poudlard", "Bureau de Dolores Ombrage"
+            "Chemin de Traverse", "Toilettes du donjon", "Chambre des secrets", "Lac dans la Forêt Interdite", " Cimetière de Little Hangleton", "Salle d’examen de Poudlard", "Tour d’astronomie", "Poudlard", "Bureau de Dolores Ombrage", "Salle de Potions"
     };
 
 
@@ -74,12 +74,12 @@ public class BasicClass {
         do {
             clearConsole();
             System.out.print("Entrez le nom de votre sorcier : ");
-            name = scanner.next();
-            System.out.println("Le nom de votre sorcier est : " + name + ".\n\r Souhaitez-vous le modifier ?");
+            wizard.setName(scanner.next());
+            System.out.println("Le nom de votre sorcier est : " + wizard.getName() + ".\n\r Souhaitez-vous le modifier ?");
             System.out.println("1. Oui\n\r2. Non, il est parfait");
             int input = readInt("->", 2);
             if (input == 2) {
-                System.out.println("Bien " + name + ", il est l'heure d'aller sur le chemin de Traverse pour aller faire des achats avant d'aller à Poudlard. " +
+                System.out.println("Bien " + wizard.getName() + ", il est l'heure d'aller sur le chemin de Traverse pour aller faire des achats avant d'aller à Poudlard. " +
                         "Appuie sur Entrée pour aller sur le chemin de Traverse");
                 nameSet = true;
             } else {

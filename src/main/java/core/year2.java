@@ -5,7 +5,8 @@ import static core.BasicClass.wizard;
 
 public class year2 {
 
-    public static boolean goodSpell;
+
+    public static boolean goodSpell=false;
 
     public static void main(){
         introYear2();
@@ -14,6 +15,8 @@ public class year2 {
     }
 
     public static void introYear2(){
+        BasicClass.clearConsole();
+        BasicClass.printHeader("Année 2");
         System.out.println("""
                 Bienvenue en seconde année à Poudlard !
                 Cette seconde année va être un bon moyen de se former aux duels.
@@ -26,16 +29,16 @@ public class year2 {
                 1. Avada Kedavra
                 2. Accio
                 3. Bombarda Maxima""");
-        while (goodSpell){
+        while (goodSpell==false){
             int input =BasicClass.readInt("Quel sort choisissez vous ?",3);
             if (input==2){
                 System.out.println("Vous avez réussi a attraper sa peruque. Vous remportez le duel en le ridiculisant de la plus belle des manières !");
+                System.out.println("Vous vous dites que Accio est un sort plutôt utile ! Il faudrait le garder en mémoire...");
             }else {
                 goodSpell=false;
                 System.out.println("Pas ici voyons !");
             }
         }
-        System.out.println("Vous vous dites que Accio est un sort plutôt utile ! Il faudrait le garder en mémoire...");
         BasicClass.anythingToContinue();
     }
 
@@ -53,6 +56,7 @@ public class year2 {
 
 
     public static void attack2(){
+        BasicClass.printHeader(BasicClass.places[2]);
         if(wizard.getDefense() == 0){
             System.out.println("On vous attaque !");
             wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.basilic.getAttack());
@@ -144,5 +148,6 @@ public class year2 {
             }
 
         }
+        BasicClass.anythingToContinue();
     }
 }

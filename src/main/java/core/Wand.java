@@ -96,7 +96,6 @@ public class Wand {
         int wandSizeFinal = wandSize;
         System.out.println("Ta baguette t'a choisi !\r\nC'est une baguette avec "+ corePersonnality + "et qui mesure " + wandSizeFinal+ " cm.");
         System.out.println("Il est maintenant l'heure de se rendre à Poudlard pour la cérémonie de répartition !");
-        System.out.println("Appuyez sur Entrée pour vous rendre à Poudlard");
-        scanner.nextLine();
+        BasicClass.anythingToContinue();
     }
 }

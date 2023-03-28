@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fe2eb80-8b63-4963-b038-85222834c1fe" name="Changes" comment="On continue l'histoire&#10;&#10;Il faut maintenant finir les années">
+    <list default="true" id="3fe2eb80-8b63-4963-b038-85222834c1fe" name="Changes" comment="Histoire terminée jusqu'à l'année 5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/BasicClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/BasicClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/House.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/Story.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/Story.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/Wand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/Wand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/year1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/year1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/year2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/year2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/year3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/year3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/year4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/year4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/year5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/year5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/year6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/year6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/year7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/year7.java" afterDir="false" />
     </list>
     <list id="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" name="Changes by hvizz" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/core/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/Character.java" afterDir="false" />
@@ -35,10 +41,36 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/core/Character.java">
+    <file path="$PROJECT_DIR$/src/main/java/core/year1.java">
       <ranges>
-        <range start1="30" end1="31" start2="30" end2="31" changelist="3fe2eb80-8b63-4963-b038-85222834c1fe" />
-        <range start1="38" end1="45" start2="38" end2="38" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="6" end1="6" start2="6" end2="7" changelist="3fe2eb80-8b63-4963-b038-85222834c1fe" />
+        <range start1="11" end1="12" start2="12" end2="13" changelist="3fe2eb80-8b63-4963-b038-85222834c1fe" />
+        <range start1="16" end1="16" start2="17" end2="19" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="17" end1="17" start2="20" end2="21" changelist="3fe2eb80-8b63-4963-b038-85222834c1fe" />
+        <range start1="35" end1="36" start2="39" end2="39" changelist="3fe2eb80-8b63-4963-b038-85222834c1fe" />
+        <range start1="39" end1="39" start2="42" end2="43" changelist="3fe2eb80-8b63-4963-b038-85222834c1fe" />
+        <range start1="40" end1="40" start2="44" end2="45" changelist="3fe2eb80-8b63-4963-b038-85222834c1fe" />
+        <range start1="50" end1="52" start2="55" end2="56" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="53" end1="56" start2="57" end2="60" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="59" end1="60" start2="63" end2="66" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="61" end1="63" start2="67" end2="69" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="64" end1="65" start2="70" end2="71" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="68" end1="69" start2="74" end2="75" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="70" end1="70" start2="76" end2="77" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="71" end1="73" start2="78" end2="80" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="74" end1="75" start2="81" end2="82" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="78" end1="79" start2="85" end2="86" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="80" end1="80" start2="87" end2="88" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="81" end1="83" start2="89" end2="91" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="85" end1="87" start2="93" end2="96" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="89" end1="90" start2="98" end2="99" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="102" end1="103" start2="111" end2="119" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="105" end1="109" start2="121" end2="127" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="115" end1="116" start2="133" end2="134" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="118" end1="120" start2="136" end2="138" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="121" end1="122" start2="139" end2="142" changelist="46db7f02-beb5-47d8-b1d5-b93b3d10c60c" />
+        <range start1="126" end1="126" start2="146" end2="147" changelist="3fe2eb80-8b63-4963-b038-85222834c1fe" />
+        <range start1="134" end1="134" start2="155" end2="156" changelist="3fe2eb80-8b63-4963-b038-85222834c1fe" />
       </ranges>
     </file>
   </component>
@@ -134,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679865959852</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Histoire terminée jusqu'à l'année 5">
+      <created>1679958818610</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679958818610</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,6 +195,7 @@
     <MESSAGE value="Grosses erreurs enlevées&#10;&#10;Plus que quelques erreurs au niveau du name Wizard.&#10;Je fixerai ca après.&#10;On enlève les potion pour le moment" />
     <MESSAGE value="Les combats fonctionnent&#10;&#10;On peut bien avancer mtn" />
     <MESSAGE value="On continue l'histoire&#10;&#10;Il faut maintenant finir les années" />
-    <option name="LAST_COMMIT_MESSAGE" value="On continue l'histoire&#10;&#10;Il faut maintenant finir les années" />
+    <MESSAGE value="Histoire terminée jusqu'à l'année 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Histoire terminée jusqu'à l'année 5" />
   </component>
 </project>

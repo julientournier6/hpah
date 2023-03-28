@@ -4,17 +4,19 @@ import static core.BasicClass.*;
 
 public class year1 {
     static boolean goodSpell = false;
+
     static int defense = 0;
     public static void main(){
         introYear1();
         preBattleYear1();
         battle();
-        BasicClass.anythingToContinue();
+        outroYear1();
 
     }
 
     public static void introYear1(){
         BasicClass.clearConsole();
+        BasicClass.printHeader("Année 1");
         System.out.println("""
                 Bienvenue dans ton premier cours de sortilège.
                 L'objectif est de soulever une plume.
@@ -33,11 +35,12 @@ public class year1 {
                 System.out.println("Ce n'est pas la bonne prononciation. La plume que tu essaies de bouger ne s'envole pas...");
             }
         }
-        BasicClass.anythingToContinue();
     }
 
     public static void preBattleYear1(){
+        BasicClass.anythingToContinue();
         BasicClass.clearConsole();
+        BasicClass.printHeader(BasicClass.places[1]);
         System.out.println("""
                 Votre année se déroule sans encombre, un soir, vous passez devant les Toilettes du Donjon, et vous y entendez un bruit suspect.
                 Vous décidez d'aller jeter un oeil.
@@ -124,6 +127,7 @@ public class year1 {
             }
 
         }
+        BasicClass.anythingToContinue();
     }
 
     public static void outroYear1(){
@@ -132,5 +136,6 @@ public class year1 {
                 Vous craignez les ennuies mais ils semblent soulagés.
                 Le reste de votre année se passe sans encombre, vous passez en seconde année.
                 """);
+        BasicClass.anythingToContinue();
     }
 }
