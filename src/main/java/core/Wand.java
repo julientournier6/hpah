@@ -70,7 +70,7 @@ public class Wand {
         String corePersonnality = "test";
         while (!coreCorrect){
 
-            System.out.println("Qu'est-ce qui te caractérise le mieux ?\r\n1. La détermination \r\n2. L'imagination\r\n3.L'intelligence\r\n4. L'optimisme\r\n5. La gentillesse");
+            System.out.println("Qu'est-ce qui te caractérise le mieux ?\r\n1. La détermination \r\n2. L'imagination\r\n3. L'intelligence\r\n4. L'optimisme\r\n5. La gentillesse");
             int personnality = scanner.nextInt();
 
 
@@ -78,7 +78,7 @@ public class Wand {
                 corePersonnality = "un crin de licorne ";
                 coreCorrect = true;
             } else if (personnality==2){
-                corePersonnality = "un cheveu de Vélane ";
+                corePersonnality = "Un cheveu de Vélane ";
                 coreCorrect = true;
             } else if (personnality==3) {
                 corePersonnality = "Une plume de phénix ";

@@ -86,7 +86,7 @@ public class year3 {
             BasicClass.clearConsole();
             BasicClass.printSeparator(30);
             BasicClass.printHeader(Enemy.detraqueurs.getName() + "\nHP : " + Enemy.detraqueurs.getCurrentHp() + "/" + Enemy.detraqueurs.getMaxHp());
-            BasicClass.printHeader(wizard.getName()+ "\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
+            BasicClass.printHeader("Votre sorcier\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
             BasicClass.printSeparator(30);
             System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion");
             int input = BasicClass.readInt("->", 3);

@@ -56,11 +56,11 @@ public class year5 {
 
     public static void checkUserEntry2() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Veuillez entrer le texte 'Bonjour !' : ");
+        System.out.print("Veuillez entrer le texte 'Je m'engage à ne pas rejoindre l'armée de Dumbledore' : ");
 
         String entreeUtilisateur = scanner.nextLine();
 
-        if (entreeUtilisateur.equals("Bonjour !")) {
+        if (entreeUtilisateur.equals("Je m'engage à ne pas rejoindre l'armée de Dumbledore' : ")) {
             System.out.println("Les douleurs ne s'intensifient pas.");
         } else {
             wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.ombragePen.getAttack());
@@ -71,11 +71,11 @@ public class year5 {
 
     public static void checkUserEntry3() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Veuillez entrer le texte 'Bonjour !' : ");
+        System.out.print("Veuillez entrer le texte 'Ce jeu est super !' : ");
 
         String entreeUtilisateur = scanner.nextLine();
 
-        if (entreeUtilisateur.equals("Bonjour !")) {
+        if (entreeUtilisateur.equals("Ce jeu est super !")) {
             System.out.println("Les douleurs ne s'intensifient pas.");
         } else {
             wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.ombragePen.getAttack());
@@ -145,7 +145,7 @@ public class year5 {
             BasicClass.printHeader(BasicClass.places[5]);
             BasicClass.printSeparator(30);
             BasicClass.printHeader(Enemy.ombrage.getName() + "\nHP : " + Enemy.ombrage.getCurrentHp() + "/" + Enemy.ombrage.getMaxHp());
-            BasicClass.printHeader(wizard.getName() + "\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
+            BasicClass.printHeader("Votre sorcier\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
             BasicClass.printSeparator(30);
             for (int i = 0; i < 3; i++) {
                 System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion");

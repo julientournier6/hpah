@@ -77,7 +77,7 @@ public class year7  {
             BasicClass.clearConsole();
             BasicClass.printSeparator(30);
             BasicClass.printHeader(Enemy.bellatrix.getName() + "\nHP : " + Enemy.bellatrix.getCurrentHp() + "/" + Enemy.bellatrix.getMaxHp());
-            BasicClass.printHeader(wizard.getName()+ "\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
+            BasicClass.printHeader("Votre sorcier\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
             BasicClass.printSeparator(30);
             System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion");
             int input = BasicClass.readInt("->", 3);
@@ -177,7 +177,7 @@ public class year7  {
             BasicClass.clearConsole();
             BasicClass.printSeparator(30);
             BasicClass.printHeader(Enemy.voldemort.getName() + "\nHP : " + Enemy.voldemort.getCurrentHp() + "/" + Enemy.voldemort.getMaxHp());
-            BasicClass.printHeader(wizard.getName()+ "\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
+            BasicClass.printHeader("Votre sorcier\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
             BasicClass.printSeparator(30);
             System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion");
             int input = BasicClass.readInt("->", 3);

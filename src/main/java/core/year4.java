@@ -12,7 +12,9 @@ public class year4 {
     public static void main() {
         introYear4();
         preBattleYear4();
+        prePreBattle();
         battle();
+        interBattle();
         battle2();
         year4Outro();
 
@@ -28,7 +30,7 @@ public class year4 {
                 Seul les sorciers de 17 ans ou plus peuvent y participer, et un sorcier de Poudlard, Beauxbâtons et Durmstrang sera sélectionné.
                 Vous aurez un mois pour déposer votre nom dans la coupe pour participer.""");
         BasicClass.anythingToContinue();
-        System.out.println(wizard.getName() + " ! Votre nom est sorti de la coupe alors que vous n'avez que 14 ans... Vous êtes dans l'obligation de participer.\nIl va falloir affronter de nombreuses épreuves cette année.");
+        System.out.println("Un 4ème nom, c'est impossible ! Votre nom est sorti de la coupe alors que vous n'avez que 14 ans... Vous êtes dans l'obligation de participer.\nIl va falloir affronter de nombreuses épreuves cette année.");
         BasicClass.anythingToContinue();
 
     }
@@ -105,13 +107,26 @@ public class year4 {
                 goodWay3 = false;
             } else {
                 System.out.println("Vous apercrevez le Trophée, vous courrez vers lui pour le brandir, mais au moment ou vous l'effleurez vous vous sentez aspiré...");
-                goodWay3 = true;
                 BasicClass.anythingToContinue();
+                goodWay3 = true;
+
             }
 
         }
     }
 
+    public static void prePreBattle(){
+        System.out.println("""
+                Vous vous réveillez, vous êtes dans un cimetière, la main en sang.
+                """);
+    }
+
+    public static void interBattle(){
+        System.out.println("""
+                Vous avez vaincu Pettigrow, mais vous ne pouvez pas vous battre contre Voldemort.
+                Il va falloir toucher le Trophée pour pouvoir survivre.
+                """);
+    }
     public static void attack4(){
         BasicClass.printHeader(BasicClass.places[4]);
         if(wizard.getDefense() == 0){
@@ -208,7 +223,7 @@ public class year4 {
             BasicClass.clearConsole();
             BasicClass.printSeparator(30);
             BasicClass.printHeader(Enemy.peterpettigrow.getName() + "\nHP : " + Enemy.peterpettigrow.getCurrentHp() + "/" + Enemy.peterpettigrow.getMaxHp());
-            BasicClass.printHeader(wizard.getName()+ "\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
+            BasicClass.printHeader("Votre sorcier\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
 
             BasicClass.printSeparator(30);
             System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion");
@@ -260,7 +275,7 @@ public class year4 {
             BasicClass.clearConsole();
             BasicClass.printSeparator(30);
             BasicClass.printHeader(Enemy.voldemort.getName() + "\nHP : " + Enemy.voldemort.getCurrentHp() + "/" + Enemy.voldemort.getMaxHp());
-            BasicClass.printHeader(wizard.getName()+ "\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
+            BasicClass.printHeader("Votre sorcier\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
             BasicClass.printHeader("\nLe "+Enemy.trophy.getName() + " est à " + Enemy.trophy.getCurrentHp() + " mètres ! Il faudrait que vous puissiez le toucher pour retourner à Poudlard.\n Vous ne pouvez pas bouger ou l'on vous assassinera.");
             BasicClass.printSeparator(30);
             System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Accio\n\r2. Se protéger\n\r3. Utiliser une potion");
@@ -307,7 +322,7 @@ public class year4 {
     }
 
     public static void year4Outro(){
-        System.out.println("Voldemort est vivant, il va falloir se préparer pour l'affronter dans le future.");
+        System.out.println("Voldemort est vivant, il va falloir se préparer pour l'affronter dans le futur.");
         BasicClass.anythingToContinue();
     }
 

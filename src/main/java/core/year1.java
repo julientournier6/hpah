@@ -28,7 +28,8 @@ public class year1 {
         while (goodSpell == false){
             int input = BasicClass.readInt("Lequel à la bonne prononciation ?",3);
             if (input==1){
-                System.out.println("Bravo, vous avez bien appris le sortilège");
+                System.out.println("Bravo, vous avez bien appris le sortilège.");
+                BasicClass.anythingToContinue();
                 goodSpell = true;
             }else {
                 goodSpell=false;
@@ -95,8 +96,8 @@ public class year1 {
         while (true){
             BasicClass.clearConsole();
             BasicClass.printSeparator(30);
-            BasicClass.printHeader(Enemy.troll.getName() + "\nHP : " + Enemy.troll.getCurrentHp() + "/" + Enemy.troll.getMaxHp());
-            BasicClass.printHeader(wizard.getName()+ "\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
+            BasicClass.printHeader(Enemy.troll.getName()+"\nHP : " + Enemy.troll.getCurrentHp() + "/" + Enemy.troll.getMaxHp());
+            BasicClass.printHeader("Votre sorcier\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
             BasicClass.printSeparator(30);
             System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion");
             int input = BasicClass.readInt("->", 3);
@@ -111,6 +112,11 @@ public class year1 {
                 int hit = Enemy.attack;
                 System.out.println("Votre protection augmente de 1\r\nVous êtes au rang "+defense+"/4 de protection.\r\nVous avez subit "+hit+" de dégats.");
             }else {
+                System.out.println("Vous vous soignez");
+                wizard.setCurrentHp(wizard.getCurrentHp()+20);
+                if(wizard.getCurrentHp()>100){
+                    wizard.setCurrentHp(100);
+                }
                 System.out.println("On vous attaque !");
                 wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.troll.getAttack());
                 System.out.println("Vous avez subit "+Enemy.troll.getAttack()+" de dégats.");

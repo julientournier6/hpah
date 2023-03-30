@@ -110,7 +110,7 @@ public class year6 {
             BasicClass.clearConsole();
             BasicClass.printSeparator(30);
             BasicClass.printHeader(Enemy.mangemorts.getName() + "\nHP : " + Enemy.mangemorts.getCurrentHp() + "/" + Enemy.mangemorts.getMaxHp());
-            BasicClass.printHeader(wizard.getName()+ "\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
+            BasicClass.printHeader("Votre sorcier\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
             BasicClass.printSeparator(30);
             System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion");
             int input = BasicClass.readInt("->", 3);

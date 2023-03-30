@@ -1,7 +1,6 @@
 package core;
 
-import static core.BasicClass.printHeader;
-import static core.BasicClass.wizard;
+import static core.BasicClass.*;
 
 public class year2 {
 
@@ -24,7 +23,7 @@ public class year2 {
         BasicClass.anythingToContinue();
         BasicClass.clearConsole();
         System.out.println("""
-                Vous affrontez votre rivale en duel. Il faut a tout prix le ridiculiser.
+                Vous affrontez votre rival en duel. Il faut a tout prix le ridiculiser.
                 Quel sort utilisez vous ?
                 1. Avada Kedavra
                 2. Accio
@@ -34,6 +33,8 @@ public class year2 {
             if (input==2){
                 System.out.println("Vous avez réussi a attraper sa peruque. Vous remportez le duel en le ridiculisant de la plus belle des manières !");
                 System.out.println("Vous vous dites que Accio est un sort plutôt utile ! Il faudrait le garder en mémoire...");
+                BasicClass.anythingToContinue();
+                goodSpell=true;
             }else {
                 goodSpell=false;
                 System.out.println("Pas ici voyons !");
@@ -106,7 +107,7 @@ public class year2 {
             BasicClass.clearConsole();
             BasicClass.printSeparator(30);
             BasicClass.printHeader(Enemy.basilic.getName() + "\nHP : " + Enemy.basilic.getCurrentHp() + "/" + Enemy.basilic.getMaxHp());
-            BasicClass.printHeader(wizard.getName()+ "\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
+            BasicClass.printHeader("Votre sorcier\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
             BasicClass.printSeparator(30);
             System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion");
             int input = BasicClass.readInt("->", 3);
