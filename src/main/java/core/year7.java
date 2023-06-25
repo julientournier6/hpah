@@ -101,6 +101,11 @@ public class year7  {
                 attack7();
                 BasicClass.anythingToContinue();
             }else {
+                System.out.println("Vous vous soignez");
+                wizard.setCurrentHp(wizard.getCurrentHp()+20);
+                if(wizard.getCurrentHp()>100){
+                    wizard.setCurrentHp(100);
+                }
                 System.out.println("On vous attaque !");
                 wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.bellatrix.getAttack());
                 System.out.println("Vous avez subit "+Enemy.bellatrix.getAttack()+" de dégats.");
@@ -201,6 +206,11 @@ public class year7  {
                 attack75();
                 BasicClass.anythingToContinue();
             }else {
+                System.out.println("Vous vous soignez");
+                wizard.setCurrentHp(wizard.getCurrentHp()+20);
+                if(wizard.getCurrentHp()>100){
+                    wizard.setCurrentHp(100);
+                }
                 System.out.println("On vous attaque !");
                 wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.voldemort.getAttack());
                 System.out.println("Vous avez subit "+Enemy.voldemort.getAttack()+" de dégats.");

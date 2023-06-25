@@ -110,6 +110,11 @@ public class year3 {
                 attack3();
                 BasicClass.anythingToContinue();
             }else {
+                System.out.println("Vous vous soignez");
+                wizard.setCurrentHp(wizard.getCurrentHp()+20);
+                if(wizard.getCurrentHp()>100){
+                    wizard.setCurrentHp(100);
+                }
                 System.out.println("On vous attaque !");
                 wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.detraqueurs.getAttack());
                 System.out.println("Vous avez subit "+Enemy.detraqueurs.getAttack()+" de dégats.");

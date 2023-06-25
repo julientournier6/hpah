@@ -300,6 +300,11 @@ public class year4 {
                 attack45();
                 BasicClass.anythingToContinue();
             }else {
+                System.out.println("Vous vous soignez");
+                wizard.setCurrentHp(wizard.getCurrentHp()+20);
+                if(wizard.getCurrentHp()>100){
+                    wizard.setCurrentHp(100);
+                }
                 System.out.println("On vous attaque !");
                 wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.voldemort.getAttack());
                 System.out.println("Vous avez subit "+Enemy.voldemort.getAttack()+" de dégats.");

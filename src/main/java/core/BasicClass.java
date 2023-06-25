@@ -88,7 +88,7 @@ public class BasicClass {
         } while (!nameSet);
 
 
-        wizard = new Wizard(100, 100, 20);
+        wizard = new Wizard(name, 100, 20);
 
         Pet.main();
         Wand.main();

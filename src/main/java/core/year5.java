@@ -50,7 +50,6 @@ public class year5 {
         } else {
             wizard.setCurrentHp(wizard.getCurrentHp()-Enemy.ombragePen.getAttack());
             System.out.println("Vous avez subit "+Enemy.ombragePen.getAttack()+" de dégats, il vous reste "+ wizard.getCurrentHp() + " points de vie");
-
         }
     }
 
@@ -139,6 +138,42 @@ public class year5 {
         }
     }
     public static void battle() {
+        for (int i = 0; i < 3; i++) {
+            BasicClass.clearConsole();
+            BasicClass.printHeader(BasicClass.places[5]);
+            BasicClass.printSeparator(30);
+            BasicClass.printHeader(Enemy.ombrage.getName() + "\nHP : " + Enemy.ombrage.getCurrentHp() + "/" + Enemy.ombrage.getMaxHp());
+            BasicClass.printHeader("Votre sorcier\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
+            BasicClass.printSeparator(30);
+            System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion");
+            int input = BasicClass.readInt("->", 3);
+            //Conditions du tour du joueur
+            if (input == 1) {
+                //La bagarre
+                System.out.println("Vous avez choisi d'attaquer !");
+                Enemy.ombrage.setCurrentHp(Enemy.ombrage.getCurrentHp() - wizard.getAttack());
+                System.out.println("Vous avez infliger " + wizard.getAttack() + " degâts au " + Enemy.ombrage.getName());
+                BasicClass.anythingToContinue();
+                System.out.println("On vous attaque !");
+                wizard.setCurrentHp(wizard.getCurrentHp() - Enemy.ombrage.getAttack());
+                System.out.println("Vous avez subit " + Enemy.ombrage.getAttack() + " de dégats.");
+                BasicClass.anythingToContinue();
+            } else if (input == 2) {
+                //Se protéger
+                System.out.println("Vous avez choisi de vous défendre !");
+                wizard.setDefense(wizard.getDefense() + 1);
+                System.out.println("Votre protection augmente de 1\r\nVous êtes au rang " + wizard.getDefense() + " de protection.");
+                BasicClass.anythingToContinue();
+                attack5();
+                BasicClass.anythingToContinue();
+            } else {
+                System.out.println("On vous attaque !");
+                wizard.setCurrentHp(wizard.getCurrentHp() - Enemy.ombrage.getAttack());
+                System.out.println("Vous avez subit " + Enemy.ombrage.getAttack() + " de dégats.");
+                BasicClass.anythingToContinue();
+            }
+
+        }
         //boucle bataille
         while (true) {
             BasicClass.clearConsole();
@@ -147,36 +182,6 @@ public class year5 {
             BasicClass.printHeader(Enemy.ombrage.getName() + "\nHP : " + Enemy.ombrage.getCurrentHp() + "/" + Enemy.ombrage.getMaxHp());
             BasicClass.printHeader("Votre sorcier\nHP : " + wizard.getCurrentHp() + "/" + wizard.getMaxHp());
             BasicClass.printSeparator(30);
-            for (int i = 0; i < 3; i++) {
-                System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion");
-                int input = BasicClass.readInt("->", 3);
-                //Conditions du tour du joueur
-                if (input == 1) {
-                    //La bagarre
-                    System.out.println("Vous avez choisi d'attaquer !");
-                    Enemy.ombrage.setCurrentHp(Enemy.ombrage.getCurrentHp() - wizard.getAttack());
-                    System.out.println("Vous avez infliger " + wizard.getAttack() + " degâts au " + Enemy.ombrage.getName());
-                    BasicClass.anythingToContinue();
-                    System.out.println("On vous attaque !");
-                    wizard.setCurrentHp(wizard.getCurrentHp() - Enemy.ombrage.getAttack());
-                    System.out.println("Vous avez subit " + Enemy.ombrage.getAttack() + " de dégats.");
-                    BasicClass.anythingToContinue();
-                } else if (input == 2) {
-                    //Se protéger
-                    System.out.println("Vous avez choisi de vous défendre !");
-                    wizard.setDefense(wizard.getDefense() + 1);
-                    System.out.println("Votre protection augmente de 1\r\nVous êtes au rang " + wizard.getDefense() + " de protection.");
-                    BasicClass.anythingToContinue();
-                    attack5();
-                    BasicClass.anythingToContinue();
-                } else {
-                    System.out.println("On vous attaque !");
-                    wizard.setCurrentHp(wizard.getCurrentHp() - Enemy.ombrage.getAttack());
-                    System.out.println("Vous avez subit " + Enemy.ombrage.getAttack() + " de dégats.");
-                    BasicClass.anythingToContinue();
-                }
-
-            }
             System.out.println("A vous d'attaquer !\n\rChoisissez une action :\n\r1. Attaquer\n\r2. Se protéger\n\r3. Utiliser une potion\n\r4. Feux d'artifices");
             int input = BasicClass.readInt("->", 3);
             //Conditions du tour du joueur
@@ -206,6 +211,11 @@ public class year5 {
                 BasicClass.anythingToContinue();
                 BasicClass.anythingToContinue();
             }else {
+                System.out.println("Vous vous soignez");
+                wizard.setCurrentHp(wizard.getCurrentHp()+20);
+                if(wizard.getCurrentHp()>100){
+                    wizard.setCurrentHp(100);
+                }
                 System.out.println("On vous attaque !");
                 wizard.setCurrentHp(wizard.getCurrentHp() - Enemy.ombrage.getAttack());
                 System.out.println("Vous avez subit " + Enemy.ombrage.getAttack() + " de dégats.");

@@ -28,7 +28,7 @@ public class Character extends Wizard{
     public String[] damageUpgrades = {"Plus de dégats"};
     public String[] hpUpgrades = {"Plus de vie"};
     public Character(String name, int maxHp, int currentHp, int attack ){
-        super(1000, 1000, 20);
+        super(name, 1000, 20);
         this.name = name;
         this.numberDamageUpgrade = 0;
         this.numberHpUpgrade = 0;
@@ -36,9 +36,7 @@ public class Character extends Wizard{
 
     }
 
-    public int attack(){
-        return 0;
-    }
+
 
     public int defense(){
         return 0;
